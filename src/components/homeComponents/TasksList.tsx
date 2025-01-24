@@ -2,6 +2,8 @@ import {motion} from "framer-motion"
 import {FaEdit, FaTrash, FaEye, FaClock, FaCheck} from "react-icons/fa"
 import {Link} from "react-router-dom";
 import formatDate from "../../utils/formatDate.ts";
+import AlertPopup from "../../utils/alertPopup.ts";
+
 
 export default function TasksList() {
 
@@ -61,7 +63,7 @@ export default function TasksList() {
                                 <p>{(task.status == "pending") ? <FaClock className={"text-orange-500"}/> : <FaCheck className={"text-green-500"}/>}</p>
                                 <FaEye className={"cursor-pointer"}/>
                                 <FaEdit className={"text-blue-600 cursor-pointer"}/>
-                                <FaTrash className={"text-red-600 cursor-pointer"}/>
+                                <FaTrash className={"text-red-600 cursor-pointer"} onClick={ () => AlertPopup("Task deleted", "success")}/>
                             </div>
                         </motion.div>
                     )

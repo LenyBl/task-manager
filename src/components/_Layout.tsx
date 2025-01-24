@@ -4,7 +4,7 @@ import {motion} from "framer-motion";
 export default function Layout({children}: { children: React.ReactNode }) {
     return (
         <div>
-            <div className={"container text-xl border-b-2 shadow py-6"}>
+            <div className={"text-xl border-b-2 shadow py-6 w-screen"}>
                 <nav className={"flex justify-between items-center mx-10"}>
                     <h1>Logo</h1>
                     <ul className={"flex gap-12"}>
@@ -32,7 +32,7 @@ export default function Layout({children}: { children: React.ReactNode }) {
                 {children}
             </div>
             <div>
-                <footer className={"container text-center py-6 shadow mt-10"}>
+                <footer className={"fixed text-center py-6 shadow mt-10 w-screen bottom-0"}>
                     <p>Task Manager &copy; 2024</p>
                 </footer>
             </div>
